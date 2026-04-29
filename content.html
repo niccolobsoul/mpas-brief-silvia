@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>Brief copy piattaforma martinabindi.com — Silvia Anelli</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --coral: #fc4c02;
+    --coral-light: #ff7a3d;
+    --coral-glow: rgba(252, 76, 2, 0.12);
+    --tan: #ca916c;
+    --lavender: #ae7eca;
+    --navy: #002d72;
+    --navy-light: #1a4188;
+    --cream: #faf6f1;
+    --cream-dark: #f0e8dd;
+    --text: #1d1d1d;
+    --text-soft: #5c5c5c;
+    --border: #e5ddd0;
+    --green: #2fa66a;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'DM Sans', -apple-system, sans-serif;
+    color: var(--text);
+    background: var(--cream);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* HERO */
+  .hero {
+    background: var(--navy);
+    color: #fff;
+    padding: 64px 48px 56px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -40%; right: -20%;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, var(--coral) 0%, transparent 70%);
+    opacity: 0.15;
+  }
+  .hero-inner { max-width: 900px; margin: 0 auto; position: relative; }
+  .hero-eyebrow {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--coral-light);
+    font-weight: 500;
+    margin-bottom: 18px;
+  }
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 44px;
+    font-weight: 400;
+    line-height: 1.15;
+    max-width: 680px;
+    margin-bottom: 18px;
+  }
+  .hero h1 em { color: var(--coral-light); font-style: italic; }
+  .hero-sub {
+    font-size: 15px;
+    color: rgba(255,255,255,0.7);
+    max-width: 620px;
+    line-height: 1.7;
+  }
+  .meta-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 36px;
+    padding-top: 28px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+  .meta-item {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+  }
+  .meta-item span {
+    display: block;
+    color: rgba(255,255,255,0.95);
+    font-size: 14px;
+    letter-spacing: 0;
+    text-transform: none;
+    font-weight: 500;
+    margin-top: 4px;
+  }
+
+  /* MAIN */
+  main { max-width: 900px; margin: 0 auto; padding: 48px; }
+
+  section { margin-bottom: 56px; }
+  .sec-eyebrow {
+    font-size: 10px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--coral);
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 14px;
+  }
+  h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 400;
+    margin: 28px 0 12px;
+  }
+  h4 {
+    font-size: 15px;
+    font-weight: 700;
+    margin: 20px 0 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--navy);
+  }
+  p { margin-bottom: 14px; font-size: 15px; }
+  .sec-desc { color: var(--text-soft); font-size: 16px; margin-bottom: 24px; max-width: 700px; }
+  ul, ol { margin: 0 0 16px 22px; }
+  ul li, ol li { margin-bottom: 6px; font-size: 15px; }
+  strong { color: var(--navy); }
+  a { color: var(--coral); text-decoration: none; border-bottom: 1px solid var(--coral-glow); }
+  a:hover { border-bottom-color: var(--coral); }
+
+  hr.divider {
+    border: 0;
+    height: 1px;
+    background: var(--border);
+    margin: 0 0 40px;
+  }
+
+  /* CALLOUT */
+  .callout {
+    background: var(--coral-glow);
+    border-left: 3px solid var(--coral);
+    padding: 18px 22px;
+    margin: 20px 0;
+    border-radius: 0 8px 8px 0;
+  }
+  .callout h4 { margin-top: 0; color: var(--coral); font-size: 12px; letter-spacing: 1px; }
+  .callout p:last-child { margin-bottom: 0; }
+
+  .callout-navy {
+    background: rgba(0, 45, 114, 0.06);
+    border-left: 3px solid var(--navy);
+  }
+  .callout-navy h4 { color: var(--navy); }
+
+  /* SURFACE BLOCK — screenshot + specs */
+  .surface {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 32px;
+    margin-bottom: 32px;
+    box-shadow: 0 2px 14px rgba(0,0,0,0.03);
+  }
+  .surface-head {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 6px;
+  }
+  .surface-tag {
+    display: inline-block;
+    background: var(--navy);
+    color: #fff;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 100px;
+    font-weight: 700;
+  }
+  .surface-tag.new { background: var(--coral); }
+  .surface-tag.rec { background: var(--tan); }
+  .surface h3 {
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+  }
+  .surface-sub {
+    color: var(--text-soft);
+    font-size: 14px;
+    margin-bottom: 22px;
+    font-style: italic;
+  }
+
+  /* IMAGE ANNOTATION */
+  .img-container {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin: 16px 0 24px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    background: #f5f0e7;
+  }
+  .img-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .annot {
+    position: absolute;
+    border: 3px solid var(--coral);
+    background: rgba(252, 76, 2, 0.1);
+    border-radius: 4px;
+    pointer-events: none;
+  }
+  .annot.strike {
+    border-color: #b33;
+    background: rgba(179, 51, 51, 0.08);
+    border-style: dashed;
+  }
+  .annot.new {
+    border-color: var(--green);
+    background: rgba(47, 166, 106, 0.1);
+    border-style: dashed;
+  }
+  .annot .num {
+    position: absolute;
+    top: -14px;
+    left: -3px;
+    background: var(--coral);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 9px;
+    border-radius: 4px;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+  }
+  .annot.strike .num { background: #b33; }
+  .annot.new .num { background: var(--green); }
+
+  .img-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    font-size: 12px;
+    color: var(--text-soft);
+    margin-bottom: 20px;
+  }
+  .img-legend span { display: inline-flex; align-items: center; gap: 6px; }
+  .img-legend .sw {
+    display: inline-block;
+    width: 12px; height: 12px;
+    border: 2px solid;
+    border-radius: 2px;
+  }
+  .img-legend .sw.coral { border-color: var(--coral); background: rgba(252, 76, 2, 0.1); }
+  .img-legend .sw.green { border-color: var(--green); background: rgba(47, 166, 106, 0.1); border-style: dashed; }
+  .img-legend .sw.strike { border-color: #b33; background: rgba(179, 51, 51, 0.08); border-style: dashed; }
+
+  /* SPEC LIST */
+  .specs { margin-top: 8px; }
+  .spec {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    gap: 14px;
+    padding: 14px 0;
+    border-bottom: 1px dashed var(--border);
+  }
+  .spec:last-child { border-bottom: 0; }
+  .spec-n {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px; height: 32px;
+    background: var(--coral);
+    color: #fff;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 13px;
+  }
+  .spec-n.new-badge { background: var(--green); }
+  .spec-body h5 {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 3px;
+    color: var(--navy);
+  }
+  .spec-body p { margin: 2px 0; font-size: 14px; }
+  .spec-body .today { color: var(--text-soft); font-size: 13px; }
+  .spec-body .today strong { color: var(--text); }
+
+  /* WIREFRAME */
+  .wire {
+    background: #faf6f1;
+    border: 2px dashed var(--navy);
+    border-radius: 10px;
+    padding: 22px;
+    margin: 14px 0 22px;
+  }
+  .wire-label {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--navy);
+    font-weight: 700;
+    margin-bottom: 14px;
+  }
+  .wire-header {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 18px;
+  }
+  .wire-box {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+  }
+  .wire-box .wb-label {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--coral);
+    margin-bottom: 4px;
+  }
+  .wire-box .wb-desc {
+    font-size: 11px;
+    color: var(--text-soft);
+    line-height: 1.4;
+  }
+  .wire-rest {
+    background: rgba(0,0,0,0.03);
+    border-radius: 6px;
+    padding: 14px;
+    font-size: 12px;
+    color: var(--text-soft);
+    text-align: center;
+    font-style: italic;
+  }
+
+  /* TABLE */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 18px 0;
+    font-size: 14px;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  th { background: var(--cream-dark); font-weight: 700; color: var(--navy); }
+  th, td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); vertical-align: top; }
+  tr:last-child td { border-bottom: 0; }
+
+  /* LINGUA BOX */
+  .lang-box {
+    display: grid;
+    gap: 14px;
+    margin: 16px 0;
+  }
+  .lang-row {
+    background: #fff;
+    border-left: 3px solid var(--coral);
+    padding: 14px 18px;
+    border-radius: 0 8px 8px 0;
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--coral);
+  }
+  .lang-row strong { color: var(--coral); }
+
+  /* FOOTER */
+  footer {
+    background: var(--navy);
+    color: rgba(255,255,255,0.55);
+    padding: 28px 48px;
+    text-align: center;
+    font-size: 12px;
+  }
+
+  @media (max-width: 720px) {
+    main { padding: 32px 20px; }
+    .hero { padding: 48px 24px 40px; }
+    .hero h1 { font-size: 30px; }
+    .meta-grid { grid-template-columns: 1fr; gap: 14px; }
+    .surface { padding: 22px; }
+    .wire-header { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Brief copy piattaforma — tranche 1</div>
+    <h1>Copy di <em>martinabindi.com</em> per il test Pioneer di maggio</h1>
+    <p class="hero-sub">Mappa delle superfici interne della piattaforma, con gli screenshot delle pagine da toccare e l'elenco preciso di cosa scrivere. Si appoggia al brief comunicazione che hai gia'.</p>
+    <div class="meta-grid">
+      <div class="meta-item">A<span>Silvia Anelli</span></div>
+      <div class="meta-item">Da<span>Niccolo' Zampino</span></div>
+      <div class="meta-item">Data<span>22 aprile 2026</span></div>
+      <div class="meta-item">Deadline bozza<span>28 aprile, sera</span></div>
+      <div class="meta-item">Go live<span>4 maggio 2026</span></div>
+      <div class="meta-item">Approvano<span>Niccolo' + Martina</span></div>
+    </div>
+  </div>
+</div>
+
+<main>
+
+<!-- ═══ 1. Come leggere ═══ -->
+<section>
+  <div class="sec-eyebrow">01 — Come leggere questo brief</div>
+  <h2>Si appoggia al brief comunicazione, non lo ripete</h2>
+  <p>Il brief comunicazione che hai gia' (<a href="https://niccolobsoul.github.io/mpas-brief-comunicazione/" target="_blank">niccolobsoul.github.io/mpas-brief-comunicazione</a>) resta il framework principale — target Genoveffa, gerarchia emotiva con sicurezza al centro, parole si/no, hook lines, ponte YouTube→piattaforma.</p>
+  <p>Questo brief aggiunge tre cose:</p>
+  <ul>
+    <li>Lo <strong>scope del copy interno</strong> alla piattaforma per i 24 giorni del test</li>
+    <li>Come sara' <strong>strutturata la piattaforma</strong> al 4 maggio</li>
+    <li>Gli <strong>screenshot di ogni superficie</strong> da toccare con la voce corrispondente</li>
+  </ul>
+</section>
+
+<hr class="divider">
+
+<!-- ═══ 2. Piano B ═══ -->
+<section>
+  <div class="sec-eyebrow">02 — Contesto architetturale</div>
+  <h2>Come sara' strutturata la piattaforma al 4 maggio</h2>
+  <p class="sec-desc">Quello che segue e' lo stato che le utenti troveranno al go live. Serve a inquadrare lo scope del copy qui sotto.</p>
+
+  <p>Dopo il login l'utente entra su una <strong>pagina unica di ingresso</strong> con due card: <strong>Percorso Viso</strong> (ciclo 7 giorni tematici) e <strong>Percorso Corpo</strong> (lun-dom, struttura nuova, uniforme con Viso).</p>
+
+  <p>L'utente clicca Viso o Corpo → atterra direttamente sulla pagina <strong>Programma Corso</strong> del percorso scelto (card giornaliere + barra percentuale). Dentro la pagina del singolo giorno trova i 3 livelli (Sedia / Base / Avanzato) + Pillole + Focus.</p>
+
+  <p><strong>Sopra i due percorsi</strong> c'e' un header di navigazione con 3 sezioni: <strong>Auto-test / Approfondimenti / Parola degli Esperti</strong>. Il copy di quelle 3 pagine e' in scope.</p>
+</section>
+
+<hr class="divider">
+
+<!-- ═══ 3. Principio di scope ═══ -->
+<section>
+  <div class="sec-eyebrow">03 — Principio di scope</div>
+  <h2>Perche' la tranche 1 copre tutto il visibile, non solo le intro</h2>
+  <p class="sec-desc">Nei 24 giorni di test (4-28 mag) entrano prima le Pioneer Premium Marzo (dal 4), poi il pubblico bSoul piu' ampio (dall'11). <strong>Tutto cio' che vedono deve essere coerente nel linguaggio pro-aging.</strong></p>
+  <p>Non possiamo avere pezzi nuovi in linguaggio pro-aging (le intro che scrivi tu) mescolati a etichette ancora in linguaggio da palestra ("Allenati con Pro Aging", "ALLENAMENTO LUNEDI"). Sarebbe un mix incoerente proprio nella finestra di giudizio del brand.</p>
+  <p>Quindi la tranche 1 e' larga: 13 voci obbligatorie + 2 raccomandate. La tranche 2 si sposta a dopo il test.</p>
+</section>
+
+<hr class="divider">
+
+<!-- ═══ 4. MAPPA DEL COPY — cuore del brief ═══ -->
+<section>
+  <div class="sec-eyebrow">04 — Mappa del copy</div>
+  <h2>Superfici da toccare</h2>
+  <p class="sec-desc">Ogni blocco qui sotto e' una pagina o un elemento della piattaforma: screenshot dello stato attuale ed elenco preciso di cosa scrivere.</p>
+
+  <!-- ─── 4A. Pagina di ingresso ─── -->
+  <div class="surface">
+    <div class="surface-head">
+      <span class="surface-tag">Voci 1 — 5</span>
+      <h3>Pagina di ingresso (post-login)</h3>
+    </div>
+    <p class="surface-sub">Oggi titolata "Comincia con gli allenamenti del giorno" — prima cosa che l'utente vede dopo il login.</p>
+
+    <div class="img-container">
+      <img src="img/landing_attuale.png" alt="Pagina di ingresso attuale martinabindi.com">
+    </div>
+
+    <div class="specs">
+      <div class="spec">
+        <span class="spec-n">1</span>
+        <div class="spec-body">
+          <h5>Titolo nuovo della pagina di ingresso</h5>
+          <p class="today">Oggi: <strong>"Comincia con gli allenamenti del giorno"</strong>. Proponi il nuovo titolo in linguaggio pro-aging, coerente col fatto che la pagina non parla piu' di "giorni" ma dei due percorsi.</p>
+        </div>
+      </div>
+      <div class="spec">
+        <span class="spec-n new-badge">2</span>
+        <div class="spec-body">
+          <h5>Intro testuale pagina di ingresso (nuova)</h5>
+          <p>Accoglie l'utente e introduce i due percorsi prima che scelga. Voce prima persona Martina. ~80-120 parole.</p>
+        </div>
+      </div>
+      <div class="spec">
+        <span class="spec-n">3</span>
+        <div class="spec-body">
+          <h5>Label del blocco percorsi</h5>
+          <p class="today">Oggi: <strong>"Allenati con Proaging"</strong> — rinominare in linguaggio pro-aging.</p>
+        </div>
+      </div>
+      <div class="spec">
+        <span class="spec-n">4</span>
+        <div class="spec-body">
+          <h5>Card "Percorso Viso" — label + microcopy breve</h5>
+          <p>Label della card + eventuale sottotitolo o CTA se ti serve per orientare la scelta. Stringato.</p>
+        </div>
+      </div>
+      <div class="spec">
+        <span class="spec-n new-badge">5</span>
+        <div class="spec-body">
+          <h5>Card "Percorso Corpo" — label + microcopy breve (card nuova)</h5>
+          <p>Stessa forma della card Viso. <strong>Complementare, non alternativa</strong> — il copy deve far sentire Viso + Corpo come due meta' dello stesso percorso.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── 4B. Percorso Viso ─── -->
+  <div class="surface">
+    <div class="surface-head">
+      <span class="surface-tag">Voci 6 — 7</span>
+      <h3>Pagina Programma Corso — Percorso Viso</h3>
+    </div>
+    <p class="surface-sub">L'utente arriva qui dopo aver cliccato la card Viso. Ciclo 7 giorni tematici: Drenaggio → Ossigenazione → Tonificazione → Pausa.</p>
+
+    <div class="img-container">
+      <img src="img/viso_accordion.png" alt="Programma Corso — Percorso Viso (stato attuale)">
+    </div>
+
+    <div class="specs">
+      <div class="spec">
+        <span class="spec-n new-badge">6</span>
+        <div class="spec-body">
+          <h5>Intro testuale Programma Corso Viso (nuova)</h5>
+          <p>Apre la pagina del percorso. Oggi la sezione "Introduzione" e' <strong>vuota</strong>. Voce prima persona Martina, ~80-120 parole.</p>
+        </div>
+      </div>
+      <div class="spec">
+        <span class="spec-n">7</span>
+        <div class="spec-body">
+          <h5>Label delle 7 card giorni (Viso)</h5>
+          <p class="today">Oggi: <strong>"1° GIORNO – DRENAGGIO"</strong>, <strong>"2° GIORNO – OSSIGENAZIONE"</strong>, ... "7° GIORNO – TONIFICAZIONE". Verifica la coerenza pro-aging della formulazione, riformula se serve (es. tema piu' accogliente davanti al numero del giorno).</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ─── 4C. Percorso Corpo ─── -->
+  <div class="surface">
+    <div class="surface-head">
+      <span class="surface-tag new">Voci 8 — 9 · Pagina nuova</span>
+      <h3>Pagina Programma Corso — Percorso Corpo</h3>
+    </div>
+    <p class="surface-sub">Pagina da costruire. <strong>Stessa struttura del Viso</strong> (header + barra % + intro + card giornaliere) — lo screenshot sotto e' il Viso, usalo come riferimento visivo.</p>
+
+    <div class="img-container">
+      <img src="img/viso_accordion.png" alt="Riferimento layout — il Corpo avra' stessa struttura del Viso">
+    </div>
+
+    <div class="specs">
+      <div class="spec">
+        <span class="spec-n new-badge">8</span>
+        <div class="spec-body">
+          <h5>Intro testuale Programma Corso Corpo (nuova)</h5>
+          <p>Apre la pagina del percorso settimanale (lun-dom) con 3 livelli + Pillole + Focus. Voce prima persona Martina, ~80-120 parole. <strong>Complementare all'intro Viso</strong>: deve "parlare con" quella.</p>
+        </div>
+      </div>
+      <div class="spec">
+        <span class="spec-n">9</span>
+        <div class="spec-body">
+          <h5>Label delle 7 card giorni (Corpo)</h5>
+          <p class="today">Oggi: <strong>"ALLENAMENTO LUNEDI", "ALLENAMENTO MARTEDI", ...</strong> fino alla domenica — fuori regola pro-aging. Sostituisci con formulazione allineata al linguaggio del brand.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── 4D. Header post-login ─── -->
+  <div class="surface">
+    <div class="surface-head">
+      <span class="surface-tag new">Voci 11 — 13</span>
+      <h3>Header post-login — 3 sezioni di navigazione</h3>
+    </div>
+    <p class="surface-sub">Sopra le card Viso + Corpo, header con 3 sezioni. I video sono <strong>gia' pronti</strong> — scrivi solo intro minime di accoglienza + orientamento. Lunghezza stringata.</p>
+
+    <div class="wire">
+      <div class="wire-label">Wireframe indicativo (UI ancora da costruire)</div>
+      <div class="wire-header">
+        <div class="wire-box">
+          <div class="wb-label">Auto-valutazioni</div>
+          <div class="wb-desc">Sezione con auto-test video (postura, cellulite, ecc.). Nome definitivo lo scegli tu — vincolo: deve contenere "auto".</div>
+        </div>
+        <div class="wire-box">
+          <div class="wb-label">Approfondimenti</div>
+          <div class="wb-desc">Martina spiega posture, respirazione, ecc.</div>
+        </div>
+        <div class="wire-box">
+          <div class="wb-label">Parola degli Esperti</div>
+          <div class="wb-desc">Video con professionisti (urologo, fisiatra, nutrizionista...)</div>
+        </div>
+      </div>
+      <div class="wire-rest">Sotto l'header: le 2 card Percorso Viso + Percorso Corpo</div>
+    </div>
+
+    <div class="specs">
+      <div class="spec">
+        <span class="spec-n new-badge">11</span>
+        <div class="spec-body">
+          <h5>Intro sezione auto-valutazioni</h5>
+          <p>Sezione con auto-valutazioni video (postura, cellulite, ecc.). L'utente guarda un video e si auto-valuta. Accoglienza + orientamento al video, stringato.</p>
+        </div>
+      </div>
+      <div class="spec">
+        <span class="spec-n new-badge">12</span>
+        <div class="spec-body">
+          <h5>Intro pagina "Approfondimenti"</h5>
+          <p>Martina spiega il perche' di posture, modi di respirare, ecc. Accoglienza + orientamento al video.</p>
+        </div>
+      </div>
+      <div class="spec">
+        <span class="spec-n new-badge">13</span>
+        <div class="spec-body">
+          <h5>Intro pagina "Parola degli Esperti"</h5>
+          <p>Video di Martina con professionisti (urologo, fisiatra / osteopata, nutrizionista, geriatra, nutrizione dello sport, psicoterapeuta). Accoglienza + orientamento al video.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout">
+      <h4>Naming della sezione header — vincolo</h4>
+      <p>Il nome della sezione header (quella con le auto-valutazioni video) deve <strong>contenere "auto"</strong>. Come si chiamera' precisamente lo proponi tu — Martina ha vincolato solo quel requisito.</p>
+    </div>
+  </div>
+
+  <!-- ─── 4E. Messaggio di benvenuto ─── -->
+  <div class="surface">
+    <div class="surface-head">
+      <span class="surface-tag">Voce 10</span>
+      <h3>Messaggio di benvenuto della piattaforma</h3>
+    </div>
+    <p class="surface-sub">Touchpoint 04 del brief comunicazione. Oggi esiste un messaggio generico, va rivisto nel tono. Non ha screenshot dedicato: valutiamo in telefonata se collassarlo nell'intro pagina ingresso o tenerlo distinto (es. banner, popup prima volta).</p>
+
+    <div class="specs">
+      <div class="spec">
+        <span class="spec-n">10</span>
+        <div class="spec-body">
+          <h5>Messaggio di benvenuto</h5>
+          <p>Oggi formula base: <em>"Benvenuta nel tuo percorso pro-aging. Inizia da qui."</em> Da rivedere nel tono — brevissimo, accogliente, come Martina che ti dice "vieni, ti faccio vedere". Decidiamo in telefonata se e' un elemento a se' stante o parte dell'intro (voce 2).</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── 4F. Raccomandati ─── -->
+  <div class="surface">
+    <div class="surface-head">
+      <span class="surface-tag rec">Raccomandati — non bloccanti</span>
+      <h3>Microcopy giorno (se la capacita' lo permette)</h3>
+    </div>
+    <p class="surface-sub">Due elementi accessibili dentro la pagina del singolo giorno. Non sono bloccanti — se capacita' ridotta, slittano.</p>
+
+    <div class="img-container">
+      <img src="img/giorno_accordion.png" alt="Pagina singolo giorno — stato attuale">
+    </div>
+
+    <div class="specs">
+      <div class="spec">
+        <span class="spec-n" style="background: var(--tan);">R2</span>
+        <div class="spec-body">
+          <h5>Popup di pausa (Domenica Corpo / Giorno 4 Viso)</h5>
+          <p class="today">Oggi: <strong>"Un giorno di pausa e relax tutto per te!"</strong> — verifica se mantieni o riformuli.</p>
+        </div>
+      </div>
+      <div class="spec">
+        <span class="spec-n" style="background: var(--tan);">R3</span>
+        <div class="spec-body">
+          <h5>Label selettore livelli dentro il giorno</h5>
+          <p class="today">Oggi negli accordion: <strong>"Forza sulla sedia"</strong>, <strong>"Forza base"</strong>, <strong>"Forza avanzato"</strong>, <strong>"Pillole di Forza"</strong>. Verifica coerenza pro-aging e proponi riformulazione se serve.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<hr class="divider">
+
+<!-- ═══ 5. Voce ═══ -->
+<section>
+  <div class="sec-eyebrow">05 — Voce e tono</div>
+  <h2>Prima persona Martina, come negli script video</h2>
+  <p>Martina parla direttamente alla persona che entra. Non e' una descrizione oggettiva del percorso — e' un invito, una presa per mano. Tono accogliente, diretto, caldo, concreto. Come se Martina ti dicesse <em>"vieni, ti faccio vedere"</em>.</p>
+  <p><strong>Approvazione voce:</strong> la voce viene validata da Martina quando consegni la bozza (Niccolo' le gira il Google Doc il 29 apr). Se qualcosa ti sembra borderline rispetto a come parla Martina, segnalalo con un commento — decide lei in revisione.</p>
+</section>
+
+<!-- ═══ 6. Lunghezza ═══ -->
+<section>
+  <div class="sec-eyebrow">06 — Lunghezza e formato</div>
+  <h2>80-120 parole per intro, orientative</h2>
+  <p>Se per tenere l'impatto ne servono meno (60) o piu' (150), scrivi la versione che funziona. Lo discutiamo in telefonata.</p>
+  <p>Per <strong>titoli, label card, microcopy</strong>: stringati, chiari, non didascalici. Il contesto visivo (card colorata, icona) fa meta' del lavoro.</p>
+  <h4>Schema consigliato per le intro</h4>
+  <ul>
+    <li>1-2 frasi di apertura (la persona si sente accolta)</li>
+    <li>2-3 frasi che presentano il percorso (beneficio prima, meccanismo dopo)</li>
+    <li>1 frase che orienta all'azione (cosa fa adesso)</li>
+  </ul>
+</section>
+
+<!-- ═══ 7. Evergreen ═══ -->
+<section>
+  <div class="sec-eyebrow">07 — Copy evergreen</div>
+  <h2>Niente "sei tra le prime" in piattaforma</h2>
+  <p>Il copy delle pagine interne <strong>resta</strong> anche dopo il test di maggio. Quindi: nessun riferimento al Pioneer Premium Marzo, nessun "sei tra le prime", nessuna esclusivita' temporale, nessun countdown. Quei messaggi stanno nelle email di invito, non qui.</p>
+  <p>Scrivi un copy che funziona oggi per Pioneer e funziona domani per chi entrera' dopo.</p>
+</section>
+
+<!-- ═══ 8. Disclaimer ═══ -->
+<section>
+  <div class="sec-eyebrow">08 — Disclaimer medico-legale</div>
+  <h2>Sta nel footer, lo scrive l'avvocato</h2>
+  <p>Claim redatto dal legale con invito a consultare il medico per patologie particolari ed esclusione di responsabilita'. Arrivera' come blocco fisso quando il legale lo consegna.</p>
+</section>
+
+<hr class="divider">
+
+<!-- ═══ 9. Vincoli linguistici ═══ -->
+<section>
+  <div class="sec-eyebrow">09 — Vincoli linguistici</div>
+  <h2>Riprende il brief 1, solo le regole critiche qui</h2>
+  <p class="sec-desc">Le regole complete (Parole si / Parole no) stanno nel brief comunicazione. Qui solo le critiche per il copy di queste superfici.</p>
+  <ul>
+    <li><strong>Pro-aging</strong>, mai anti-age</li>
+    <li><strong>Cura / rituale / percorso / programma</strong>, mai allenamento / workout / training / fitness</li>
+    <li>Il periodo di <strong>60 giorni di fruizione dei contenuti</strong> — scegli tu come chiamarlo. Evita <em>"test"</em> (l'utente non deve sentirsi cavia), <em>"abbonamento"</em>, <em>"prova"</em>.</li>
+    <li>Mai contrapposizione esplicita YouTube ↔ piattaforma</li>
+    <li>Beneficio prima, meccanismo dopo</li>
+    <li>Differenziatore <strong>corpo + viso insieme</strong> = USP principale</li>
+    <li>Payoff: <strong>"Ogni giorno, un po' piu' tu"</strong></li>
+    <li>Claim (fissato 23 apr, approvato da Martina): <strong>"La mia cura pro-aging per corpo e viso, passo dopo passo."</strong> Se lo vedi utile in titoli o microcopy, usa questa formulazione esatta.</li>
+  </ul>
+
+</section>
+
+</main>
+
+<footer>
+  Brief copy piattaforma — Silvia Anelli · 22 aprile 2026 · MPAS · documento privato
+</footer>
+
+</body>
+</html>
