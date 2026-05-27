@@ -8,7 +8,7 @@
   <style>
     :root { --navy:#002d72; --orange:#fc4c02; --paper:#fffdf9; --ink:#152129; --muted:#5e6a70; --line:#e6e1db; }
     * { box-sizing: border-box; }
-    body { margin:0; min-height:100vh; display:grid; place-items:center; background:linear-gradient(135deg, rgba(0,45,114,.08), rgba(252,76,2,.06)), var(--paper); color:var(--ink); font-family:"Avenir Next", Avenir, "Helvetica Neue", Arial, sans-serif; }
+    body { margin:0; min-height:100vh; display:grid; place-items:center; overflow-x:hidden; background:linear-gradient(135deg, rgba(0,45,114,.08), rgba(252,76,2,.06)), var(--paper); color:var(--ink); font-family:"Avenir Next", Avenir, "Helvetica Neue", Arial, sans-serif; }
     .gate { width:min(520px, calc(100% - 32px)); background:white; border:1px solid var(--line); border-radius:16px; padding:34px; box-shadow:0 24px 70px rgba(0,45,114,.13); }
     .logo { width:220px; height:auto; margin-bottom:28px; }
     h1 { margin:0 0 12px; color:var(--navy); font-size:30px; line-height:1.12; letter-spacing:0; }
@@ -19,6 +19,11 @@
     button { height:48px; border:0; border-radius:8px; padding:0 18px; background:var(--orange); color:white; font-size:15px; font-weight:800; cursor:pointer; }
     .error { min-height:22px; margin-top:14px; color:#b02020; font-size:14px; }
     .hint { margin-top:18px; color:var(--muted); font-size:13px; }
+    .whatsapp-cue { position:fixed; left:-30px; top:calc(50% + 54px); width:clamp(120px, 18vw, 260px); height:92px; pointer-events:none; z-index:0; }
+    .whatsapp-mark { position:absolute; left:0; top:12px; width:66px; height:66px; border-radius:50%; display:grid; place-items:center; background:#25d366; box-shadow:0 16px 42px rgba(37,211,102,.38); }
+    .whatsapp-mark svg { width:34px; height:34px; display:block; }
+    .cue-arrow { position:absolute; left:52px; top:0; width:100%; height:92px; overflow:visible; }
+    @media (max-width:760px){ .whatsapp-cue{display:none;} }
     @media (max-width:520px){ .row{display:block;} button{width:100%; margin-top:10px;} .gate{padding:26px;} }
   </style>
 </head>
@@ -26,7 +31,22 @@
   <main class="gate">
     <img class="logo" src="assets/logo-mpas-color-orizz.png" alt="Martina Pro Aging Specialist">
     <h1>Brief protetto</h1>
-    <p>Inserisci la password per aprire il Brand &amp; Messaging Brief.</p>
+    <p>Inserisci la password che ti ho mandato su WhatsApp.</p>
+    <div class="whatsapp-cue" aria-hidden="true">
+      <div class="whatsapp-mark">
+        <svg viewBox="0 0 32 32" role="img" aria-label="WhatsApp">
+          <path fill="#fff" d="M16.1 4.2c-6.2 0-11.2 4.9-11.2 11 0 2.1.6 4.1 1.7 5.8l-1.8 6.7 6.9-1.8c1.4.8 2.9 1.1 4.5 1.1 6.2 0 11.2-4.9 11.2-11S22.3 4.2 16.1 4.2zm0 20.9c-1.4 0-2.7-.4-3.9-1.1l-.3-.2-4.1 1.1 1.1-4-.2-.4c-1-1.5-1.5-3.3-1.5-5.1 0-5.1 4-9.2 9-9.2s9 4.1 9 9.2-4.1 9.7-9.1 9.7zm5.2-6.9c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-1 1.1-.2.2-.4.2-.7.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.1-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.2 4.9 4.4 2.4 1 2.9.8 3.4.7.5-.1 1.7-.7 1.9-1.3.2-.6.2-1.2.2-1.3-.1-.1-.3-.2-.6-.4z"/>
+        </svg>
+      </div>
+      <svg class="cue-arrow" viewBox="0 0 260 92" preserveAspectRatio="none">
+        <defs>
+          <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+            <path d="M0,0 L10,5 L0,10 Z" fill="#fc4c02"></path>
+          </marker>
+        </defs>
+        <path d="M4 58 C72 22, 148 12, 245 45" fill="none" stroke="#fc4c02" stroke-width="5" stroke-linecap="round" marker-end="url(#arrowhead)"></path>
+      </svg>
+    </div>
     <form id="form">
       <label for="password">Password</label>
       <div class="row">
